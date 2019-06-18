@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0 1 0 4.71238898038469
-  position -2.0246997785819434 0.5339956492368354 0.19377432454305862
+  orientation 0 1 0 0
+  position 0.422841848732169 0.626154787162368 3.2248972236682008
 }
 TexturedBackground {
 }
@@ -16,44 +16,74 @@ Solid {
   children [
     Group {
       children [
-        Solid {
-          translation 0 0.5 0
-          rotation 1 0 0 0.3927
+        DEF A Group {
           children [
-            DEF POSTE Shape {
-              appearance PBRAppearance {
-                baseColor 0.9607843137254902 0.4745098039215686 0
-                roughness 1
-                metalness 0
-              }
-              geometry Cylinder {
-                height 1
-                radius 0.03
-              }
+            Solid {
+              translation 0 0.5 0
+              rotation 1 0 0 0.3927
+              children [
+                DEF POSTE Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.9607843137254902 0.4745098039215686 0
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 1
+                    radius 0.03
+                  }
+                }
+              ]
+              name "solid(1)"
+            }
+            Transform {
+              translation 0 0.5 0.4
+              rotation 1 0 0 -0.3926996938995747
+              children [
+                USE POSTE
+              ]
+            }
+            Transform {
+              translation 0 0.5 0.2
+              rotation 1 0 0 1.5708
+              children [
+                DEF POSTE_A Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
+                    roughness 1
+                    metalness 0
+                  }
+                  geometry Cylinder {
+                    height 0.4
+                    radius 0.03
+                  }
+                }
+              ]
             }
           ]
         }
-        Transform {
-          translation 0 0.5 0.4
-          rotation 1 0 0 -0.3926996938995747
+        DEF A2 Group {
           children [
-            USE POSTE
-          ]
-        }
-        Transform {
-          translation 0 0.5 0.2
-          rotation 1 0 0 1.5708
-          children [
-            Shape {
-              appearance PBRAppearance {
-                baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
-                roughness 1
-                metalness 0
-              }
-              geometry Cylinder {
-                height 0.4
-                radius 0.03
-              }
+            Transform {
+              translation 1 0.5 0
+              rotation 1 0 0 0.3926996938995747
+              children [
+                USE POSTE
+              ]
+            }
+            Transform {
+              translation 1 0.5 0.4
+              rotation 1 0 0 -0.3926996938995747
+              children [
+                USE POSTE
+              ]
+            }
+            Transform {
+              translation 1 0.5 0.2
+              rotation 1 0 0 1.5707996938995747
+              children [
+                USE POSTE_A
+              ]
             }
           ]
         }
