@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0 1 0 0
-  position 0.422841848732169 0.626154787162368 3.2248972236682008
+  position 0.5242626684057538 0.7125915123612343 3.2883735003564754
 }
 TexturedBackground {
 }
@@ -83,6 +83,13 @@ Solid {
               rotation 1 0 0 1.5707996938995747
               children [
                 USE POSTE_A
+              ]
+            }
+            Transform {
+              translation 0.5 0.93 0.2
+              rotation 0 0 1 1.5707996938995747
+              children [
+                USE POSTE
               ]
             }
           ]
