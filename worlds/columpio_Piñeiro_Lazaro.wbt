@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0 1 0 4.71238898038469
-  position -2.3773729279851645 0.3165519470599906 0.2143320474885351
+  position -2.0246997785819434 0.5339956492368354 0.19377432454305862
 }
 TexturedBackground {
 }
@@ -12,22 +12,47 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.5 0
-  rotation 1 0 0 0.5235996938995747
+  rotation 1 0 0 0
   children [
     Group {
       children [
-        Group {
+        Solid {
+          translation 0 0.5 0
+          rotation 1 0 0 0.3927
           children [
             DEF POSTE Shape {
               appearance PBRAppearance {
-                baseColor 0.45098039215686275 0.8235294117647058 0.08627450980392157
+                baseColor 0.9607843137254902 0.4745098039215686 0
                 roughness 1
                 metalness 0
               }
               geometry Cylinder {
                 height 1
-                radius 0.04
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.5 0.4
+          rotation 1 0 0 -0.3926996938995747
+          children [
+            USE POSTE
+          ]
+        }
+        Transform {
+          translation 0 0.5 0.2
+          rotation 1 0 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.4470588235294118 0.6235294117647059 0.8117647058823529
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.4
+                radius 0.03
               }
             }
           ]
