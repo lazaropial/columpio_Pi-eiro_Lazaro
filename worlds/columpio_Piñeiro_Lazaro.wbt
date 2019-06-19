@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.6815338166911631 0.7192995961852482 0.1346096119677762 0.5359630909647987
-  position 1.428685416086607 1.1831581060950314 1.9833272773939339
+  position 1.4253682255550058 1.191908447175741 1.9942365537077593
 }
 TexturedBackground {
 }
@@ -113,49 +113,48 @@ Solid {
                   size 0.3 0.05 0.1
                 }
               }
-            ]
-            physics Physics {
-            }
-          }
-        }
-        HingeJoint {
-          jointParameters HingeJointParameters {
-            anchor 0.5 1.3 0.2
-          }
-          endPoint Solid {
-            translation 0.5 0.65 0.2
-            children [
-              Group {
-                children [
-                  Shape {
-                    appearance PBRAppearance {
-                      baseColor 0.6431372549019608 0 0
-                      roughness 1
-                      metalness 0
-                    }
-                    geometry Box {
-                      size 0.05 0.4 0.05
-                    }
-                  }
-                  Transform {
-                    translation 0 -0.28 0
-                    children [
-                      Shape {
-                        appearance PBRAppearance {
-                          baseColor 0.8 0 0
-                          roughness 1
-                          metalness 0
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                }
+                endPoint Solid {
+                  translation 0 -0.2 0
+                  rotation 1 0 0 0
+                  children [
+                    Group {
+                      children [
+                        Shape {
+                          appearance PBRAppearance {
+                            baseColor 0.6431372549019608 0 0
+                            roughness 1
+                            metalness 0
+                          }
+                          geometry Box {
+                            size 0.05 0.4 0.05
+                          }
                         }
-                        geometry Sphere {
-                          radius 0.1
+                        Transform {
+                          translation 0 -0.28 0
+                          children [
+                            Shape {
+                              appearance PBRAppearance {
+                                baseColor 0.8 0 0
+                                roughness 1
+                                metalness 0
+                              }
+                              geometry Sphere {
+                                radius 0.1
+                              }
+                            }
+                          ]
                         }
-                      }
-                    ]
+                      ]
+                    }
+                  ]
+                  physics Physics {
                   }
-                ]
+                }
               }
             ]
-            name "solid(2)"
             physics Physics {
             }
           }
